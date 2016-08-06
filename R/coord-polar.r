@@ -109,7 +109,7 @@ CoordPolar <- ggproto("CoordPolar", Coord,
         }
         range <- scale$dimension(expand)
       } else {
-        range <- range(scale_transform(scale, limits))
+        range <- range(scale$transform(scale, limits))
       }
 
       out <- scale$break_info(range)
